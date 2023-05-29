@@ -35,9 +35,9 @@ def run_mike():
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-    elif 'who is' in command:
-        person = command.replace('who is', '')
-        info = wikipedia.summary(person, 1)
+    elif 'find' in command:
+        objc = command.replace('find', '')
+        info = wikipedia.summary(objc, 1)
         print(info)
         talk(info)
 #    elif 'joke' in command:
